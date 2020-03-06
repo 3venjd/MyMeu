@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="MEU.Prims.Views.LoginPage"
+             Title="Welcome"
+             BackgroundColor="Black"
+             BackgroundImageSource="background.jpg"
+             >
+<StackLayout     
+    BackgroundColor="Transparent"
+    Padding="8"
+    >
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.30*"/>
+            <ColumnDefinition Width="0.30*"/>
+            <ColumnDefinition Width="0.30*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.17*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+        <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+        <ffimageloading:CachedImage
+             
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="3"
+            HeightRequest="100"
+            LoadingPlaceholder="LoaderImage"
+            ErrorPlaceholder="ErrorImage"
+            CacheDuration="50"
+            RetryCount="3"
+            RetryDelay="600"
+            DownsampleToViewSize="True"
+            Source="meub.png"
+            BackgroundColor="Transparent"
+            />
+      <Label
+            Grid.Column="0"
+            Grid.Row="2"
+            FontSize="Large"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Start"
+            Text="Email"
+            TextColor="White"
+        />
+        <Frame
+            Grid.Column="1"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            CornerRadius="7"
+            Padding="0"
+            BackgroundColor="#E7E7EC"
+            WidthRequest="100"
+        >
+                <Entry
+                    Margin="0,-7"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Placeholder="Enter your Email"
+                    PlaceholderColor="Black"
+                    TextColor="Black"
+                    Text="{Binding Email}"
+                />
+        </Frame>
+        <Label
+            Grid.Column="0"
+            Grid.Row="3"
+            FontSize="Large"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Start"
+            Text="Password"
+            TextColor="White"
+        />
+        <Frame
+            Grid.Column="1"
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            CornerRadius="8"
+            Padding="0"
+            BackgroundColor="#E7E7EC"
+            HeightRequest="50"
+            >
+            <Entry
+                Margin="0,-7"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Start"
+                IsPassword="True"
+                Placeholder="Enter your Password"
+                PlaceholderColor="Black"
+                TextColor="Black"
+                Text="{Binding Password}"
+            />
+        </Frame>
+            <ActivityIndicator
+                Grid.Column="0"
+                Grid.Row="5"
+                Grid.ColumnSpan="3"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                IsRunning="{Binding IsRunning}"    
+            />
+            <Button
+                Grid.Column="0"
+                Grid.Row="6"
+                Grid.ColumnSpan="3"
+                Text="Login"
+                TextColor="Black"
+                BackgroundColor="White"
+                Margin="30,0"
+                BorderRadius="8"
+                Padding="0"
+                HorizontalOptions="Center"
+                IsEnabled="{Binding IsEnable}"
+                Command="{Binding LoginCommand}"
+            />
+    </Grid>
+
+    </StackLayout>
+</ContentPage>

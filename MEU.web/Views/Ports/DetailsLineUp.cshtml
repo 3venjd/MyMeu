@@ -1,0 +1,97 @@
+﻿@model MEU.web.Data.Entities.LineUp
+
+
+<div>
+    <h4>LineUp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Vessel
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vessel)
+        </dd>
+        <dt>
+            Eta
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EtaLocal)
+        </dd>
+        <dt>
+            Etb
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EtbLocal)
+        </dd>
+        <dt>
+            Etc
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EtcLocal)
+        </dd>
+        <dt>
+            Etd
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EtdLocal)
+        </dd>
+        <dt>
+            Status
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            Cargo
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+        <dt>
+            Quantity
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            Laycan
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Laycan)
+        </dd>
+        <dt>
+            Pol/Pod
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pol_Pod)
+        </dd>
+        <dt>
+            Shipper/Consignee
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shipper_Consignee)
+        </dd>
+        <dt>
+            Cargo Charterer
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cargo_Charterer)
+        </dd>
+        <dt>
+            Agency
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agency)
+        </dd>
+        <dt>
+            Terminal
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Terminal.Terminal_Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditLineUp" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-group">Back to List</a>
+</div>

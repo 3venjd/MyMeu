@@ -1,0 +1,65 @@
+﻿@model MEU.web.Data.Entities.New
+@{
+    ViewData["Title"] = "NewImagetList";
+}
+
+<h2>NewImagetList</h2>
+
+<p>
+    <a asp-action="AddNewImage" asp-route-id="@Model.Id">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Image
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.NewImages)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:400px;height:250px;max-width:100%; height:auto" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="EditNewImage" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <button data-id="@item.Id" class="btn btn-danger deleteImage" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <a asp-action="Index">Back to List</a>
+</table>
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+            var action_to_delete;
+
+            $('.deleteImage').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+                action_to_delete = 1;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/News/DeleteNewImage/' + item_to_delete;
+            });
+        });
+    </script>
+
+}

@@ -1,0 +1,65 @@
+﻿@model MEU.web.Data.Entities.Voy
+
+@{
+    ViewData["Title"] = "OpinionList";
+}
+
+<h2>OpinionList</h2>
+
+<p>
+    <a asp-action="AddOpinion" asp-route-id="@Model.Id">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Qualification
+            </th>
+            <th>
+                Remark
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Opinions)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qualification)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a asp-action="EditOpinion" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Companies/DeleteOpinion/' + item_to_delete;
+            });
+        });
+    </script>
+}

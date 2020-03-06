@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MEU.web.Data.Entities.Company>
+
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Company</h2>
+
+<p>
+    <a asp-action="Create_Company" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                Total Users
+            </th>
+            <th>
+                Total Voys
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </th>
+
+                <th>
+                    @Html.DisplayFor(modelItem => item.Clients.Count)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Voys.Count)
+                </th>
+                <td>
+                    <a asp-action="EditCompany" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="VoyList" asp-route-id="@item.Id" class="btn btn-info">Voys</a>
+                    <a asp-action="ClientList" asp-route-id="@item.Id" class="btn btn-default">Employees</a>
+                    <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Companies/DeleteCompany/' + item_to_delete;
+            });
+        });
+    </script>
+}

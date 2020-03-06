@@ -1,0 +1,25 @@
+﻿@model MEU.web.Models.VoyImageViewModel
+
+@{
+    ViewData["Title"] = "EditVoyImage";
+}
+
+<h2>EditVoyImage</h2>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditVoyImage" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Voy_id" />
+            <input type="hidden" asp-for="Id" />
+
+            <partial name="_VoyImage" />
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+
+        </form>
+    </div>
+</div>
+

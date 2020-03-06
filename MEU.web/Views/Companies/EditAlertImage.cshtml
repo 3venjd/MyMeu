@@ -1,0 +1,23 @@
+﻿@model MEU.web.Models.AlertImageViewModel
+
+@{
+    ViewData["Title"] = "EditAlertImage";
+}
+
+<h2>EditAlertImage</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditAlertImage" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Alert_id" />
+            <input type="hidden" asp-for="Id" />
+
+            <partial name="_AlertImage" />
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+
+        </form>
+    </div>
+</div>

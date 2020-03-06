@@ -1,0 +1,89 @@
+﻿@model MEU.web.Data.Entities.Port
+@{
+    ViewData["Title"] = "TerminalsList";
+}
+
+<h2>Terminals</h2>
+
+<div>
+    <a asp-action="AddTerminal" asp-route-id="@Model.Id" class="btn btn-success">Add Terminal</a>
+</div>
+@if (Model.Terminals.Count == 0)
+{
+    <h5>
+        You don't have Ports now
+    </h5>
+}
+else
+{
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Terminals.FirstOrDefault().Terminal_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Terminals.FirstOrDefault().ImageUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Terminals.FirstOrDefault().Type_Cargo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Terminals.FirstOrDefault().Working_hours)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Terminals)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Terminal_Name)
+                    </td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                        {
+                            <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:400px;height:250px;" />
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type_Cargo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Working_hours)
+                    </td>
+
+                    <td>
+                        <a asp-action="LineUpList" asp-route-id="@item.Id" class="btn btn-info">LineUp</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                        <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Ports/DeleteTerminal/' + item_to_delete;
+            });
+        });
+    </script>
+}

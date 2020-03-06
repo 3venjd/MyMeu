@@ -1,0 +1,27 @@
+﻿@model MEU.web.Models.OpinionViewModel
+
+@{
+    ViewData["Title"] = "AddOpinion";
+}
+
+<h4>Opinion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddOpinion">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Voy_id" />
+
+            <partial name="_Opinion" />
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="OpinionList">Back to List</a>
+</div>
+

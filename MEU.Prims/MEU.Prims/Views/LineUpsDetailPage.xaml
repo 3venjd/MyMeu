@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.LineUpsDetailPage"
+             Title="Line Up Details"
+             >
+    <ScrollView>
+        <StackLayout>
+        <Grid 
+            ColumnSpacing="0"
+            RowSpacing="5"
+            Margin="5" 
+        >
+            <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*"/>
+                <ColumnDefinition Width="0.2*"/>
+             </Grid.ColumnDefinitions>
+            
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Text="Sean Jhon"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="#0F1D44"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                      
+                />
+
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="PORT"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Text="Barranquilla"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    TextColor="#BAB6B3"
+                    
+                />
+
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Text="TERMINAL"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="Port Magdalena"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Text="ETA"
+                    FontSize="Caption"
+                    TextColor="#182546"  
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="30 Jun"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    TextColor="#182546" 
+                    FontSize="Caption"
+                    Text="STATUS"
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="Outbound"
+                    
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                    Text="CARGO"
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="7"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="Edible Oil"    
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="8"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                    Text="QTTY"
+                 />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="8"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="2.091,00"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="9"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                    Text="ETB"
+                    />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="9"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="03 Jul"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="10"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                    Text="ETD"
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="10"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="03 Jul"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="11"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                    Text="LAYCAN"
+                    />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="11"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="TBC"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="12"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                    Text="POL/POD"
+                    />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="12"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="Ravenna, Italy"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="13"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                    Text="SHIPPER AND/OR CONSIGNEE"
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="13"
+                    TextColor="#BAB6B3"
+                    IsEnabled="False"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    FontSize="Small"
+                    Text="Cargill"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="14"
+                    FontSize="Caption"
+                    TextColor="#182546" 
+                    Text="CARGO CHARTERER"
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="14"
+                    TextColor="#BAB6B3"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    IsEnabled="False"
+                    FontSize="Small"
+                    Text="Allied Chemical Carriers"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="15"
+                    FontSize="Caption"
+                    TextColor="#182546"
+                    Text="AGENCY"
+                />
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="15"
+                    TextColor="#BAB6B3"
+                    HeightRequest="10"
+                    Margin = "-10"
+                    IsEnabled="False"
+                    FontSize="Small"
+                    Text="Deep Blue"
+                />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

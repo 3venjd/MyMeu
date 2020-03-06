@@ -1,0 +1,21 @@
+﻿@model MEU.web.Models.StatusViewModel
+@{
+    ViewData["Title"] = "AddStatus";
+}
+
+<h2>Add Status</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddStatus">
+            <input type="hidden" asp-for="Voy_id" />
+
+            <partial name="_Status" />
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+
+        </form>
+    </div>
+</div>

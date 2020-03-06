@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.VesselsPage">
+
+    <ScrollView>
+        <StackLayout
+            Padding="8"
+            >
+            <Grid 
+                Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="0.05*" />
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="0.05*" />
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="0.05*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--#region vessel1-->
+                <Frame
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="4"
+                    BackgroundColor="#0F1D44"
+                    CornerRadius="10"
+                    Padding="3"
+                    HasShadow="True"
+                   
+                 >
+                    <Label
+                        TextColor="White"
+                        Text="SEAN JHON"
+                        HorizontalOptions="CenterAndExpand"
+                            
+                    />
+
+                </Frame>
+
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="4"
+                    BackgroundColor="Red"
+                    Source="ship.jpg"
+                    Aspect="AspectFill"
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Text="Voys"
+                    FontSize="Large"
+                    HorizontalTextAlignment="End"
+                />
+
+                <ImageButton
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Source="ic_Go"
+                    BackgroundColor="#0F1D44"
+                    HeightRequest="10"
+                    CornerRadius="10"
+                    Command="{Binding VoysCommand}"
+                />
+                <!--#endregion-->
+
+                <!--#region vessel2-->
+                <Frame
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="4"
+                    BackgroundColor="#0F1D44"
+                    CornerRadius="10"
+                    Padding="3"
+                    HasShadow="True"
+                   
+                 >
+                    <Label
+                        TextColor="White"
+                        Text="SEAN JHON"
+                        HorizontalOptions="CenterAndExpand"
+                            
+                    />
+
+                </Frame>
+
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="4"
+                    BackgroundColor="Red"
+                    Source="ship.jpg"
+                    Aspect="AspectFill"
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Text="Voys"
+                    FontSize="Large"
+                    HorizontalTextAlignment="End"
+                />
+
+                <ImageButton
+                    Grid.Column="2"
+                    Grid.Row="5"
+                    Source="ic_Go"
+                    BackgroundColor="#0F1D44"
+                    HeightRequest="10"
+                    CornerRadius="10"
+                    Command="{Binding VoysCommand}"
+                />
+                <!--#endregion-->
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

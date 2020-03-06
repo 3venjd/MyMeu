@@ -1,0 +1,43 @@
+﻿@model MEU.web.Models.HoldViewModel
+
+<div class="form-group">
+    <label asp-for="Hold_Number" class="control-label"></label>
+    <input asp-for="Hold_Number" class="form-control" />
+    <span asp-validation-for="Hold_Number" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Actual_Quantity" class="control-label"></label>
+    <input asp-for="Actual_Quantity" class="form-control" />
+    <span asp-validation-for="Actual_Quantity" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Max_Quantity" class="control-label"></label>
+    <input asp-for="Max_Quantity" class="form-control" />
+    <span asp-validation-for="Max_Quantity" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <div class="checkbox">
+        <label>
+            <input asp-for="Is_Empty" />  @Html.DisplayNameFor(model => model.Is_Empty)
+        </label>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="checkbox">
+        <label>
+            <input asp-for="Is_Full" />  @Html.DisplayNameFor(model => model.Is_Full)
+        </label>
+    </div>
+</div>
+<div class="form-group">
+    <label asp-for="First_Charge" class="control-label"></label>
+    <input asp-for="First_Charge" class="form-control" />
+    <span asp-validation-for="First_Charge" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Last_Charge" class="control-label"></label>
+    <input asp-for="Last_Charge" class="form-control" />
+    <span asp-validation-for="Last_Charge" class="text-danger"></span>
+</div>

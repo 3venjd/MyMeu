@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.NewsPage"
+             Title="{Binding Title}"
+             >
+    <ScrollView>
+        <StackLayout>
+            <Grid
+                
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--#region new1-->
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="4"
+                    Source="encmeu.jpg"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Margin="0"
+                />
+
+                <Image
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="Gray"
+                        Aspect="Fill"
+                        HeightRequest="150"
+                        Source="new1"
+                        
+                    />
+                <Frame
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="#0F1D44"
+                        CornerRadius="8"
+                        Padding="3"
+                        HasShadow="True"
+                   
+                     >
+                    <Label
+                            Text="SEAN JHON IS HERE!!"
+                            TextColor="White"
+                            FontSize="Small"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        TextColor="#BAB6B3"
+                        Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
+                    />
+                <!--#endregion-->
+
+                <!--#region new2-->
+                <Image
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="Gray"
+                        Aspect="Fill"
+                        HeightRequest="150"
+                        Source="new2"
+                        
+                    />
+                <Frame
+                       Grid.Column="2"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="#0F1D44"
+                        CornerRadius="8"
+                        Padding="3"
+                        HasShadow="True"
+                   
+                     >
+                    <Label
+                            Text="MEU MVP COMPANY"
+                            TextColor="White"
+                            FontSize="Small"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="2"
+                        TextColor="#BAB6B3"
+                        Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
+                    />
+                <!--#endregion-->
+
+                <!--#region new3-->
+
+                <Image
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="Gray"
+                        Aspect="Fill"
+                        HeightRequest="150"
+                        Source="new3"
+                        
+                    />
+                <Frame
+                       Grid.Column="2"
+                        Grid.Row="5"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="#0F1D44"
+                        CornerRadius="8"
+                        Padding="3"
+                        HasShadow="True"
+                   
+                     >
+                    <Label
+                            Text="NEXT CARGO"
+                            TextColor="White"
+                            FontSize="Small"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="6"
+                        Grid.ColumnSpan="2"
+                        TextColor="#BAB6B3"
+                        Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
+                    />
+                <!--#endregion-->
+
+                <!--#region new4-->
+
+                <Image
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="Gray"
+                        Aspect="Fill"
+                        HeightRequest="150"
+                        Source="ship"
+                        
+                    />
+                <Frame
+                       Grid.Column="2"
+                        Grid.Row="7"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="#0F1D44"
+                        CornerRadius="10"
+                        Padding="3"
+                        HasShadow="True"
+                   
+                     >
+                    <Label
+                            Text="BIGGEST SHIP IN BUENAVENTURA"
+                            TextColor="White"
+                            FontSize="Small"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="8"
+                        Grid.ColumnSpan="2"
+                        TextColor="#BAB6B3"
+                        Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
+                    />
+                <!--#endregion-->
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

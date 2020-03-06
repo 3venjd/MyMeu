@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.StatusPage"
+             Title="{Binding Title}"
+             >
+    <ScrollView>
+        <StackLayout
+                Padding="8"
+                >
+            <Grid 
+                    Margin="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Padding="3"
+                    Text="OPERATION BRIEF"
+                    TextColor="#BAB6B3"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Text="ARRIVAL"
+                    TextColor="#182546"
+                />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="TENDERED NOR"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="ANCHORED"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="POB FOR BERTHING"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="ALL FAST"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="6"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text="COMMENCED"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="ETC"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="8"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        Text="ETD"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="9"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <StackLayout
+                         Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="12"
+                        >
+                <Grid 
+                    Margin="10"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.8*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="#0F1D44"
+                    Padding="3"
+                    Text="OPS REPORT"
+                    TextColor="#BAB6B3"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Text="TOTAL PROGRESS"
+                    TextColor="#182546"
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Text="45.200.100,00"
+                    TextColor="#BAB6B3"
+                    HorizontalTextAlignment="Center"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Text="TOTAL REMAINNING"
+                    TextColor="#182546" 
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    Text="14.799.900,00"
+                    TextColor="#BAB6B3"
+                    HorizontalTextAlignment="Center"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="PROGRESS LAST 12 HOURS"
+                    TextColor="#182546"
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    Text="300.500,00"
+                    TextColor="#BAB6B3"
+                    HorizontalTextAlignment="Center"
+                />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Text="PROGRESS LAST 24 HOURS"
+                    TextColor="#182546"   
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    Text="540.000,00"
+                    TextColor="#BAB6B3"
+                    HorizontalTextAlignment="Center"  
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Text="ETC"
+                    TextColor="#182546"     
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    Text="SEP 03"
+                    TextColor="#BAB6B3"
+                    HorizontalTextAlignment="Center"    
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    Text="ETD"
+                    TextColor="#182546"   
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    Text="AGO 23"
+                    TextColor="#BAB6B3"
+                    HorizontalTextAlignment="Center"        
+                />
+                    </Grid>
+                    <Label
+                    BackgroundColor="#0F1D44"    
+                    HeightRequest="3"
+                    Margin="5"
+                />
+                <Grid 
+                    Margin="10"
+                >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Source="popashipsf"
+                            VerticalOptions="CenterAndExpand"
+                        />
+                        <chart:SfChart
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            SideBySideSeriesPlacement="False"
+                        >
+                            
+                            <chart:SfChart.PrimaryAxis>
+                                <chart:CategoryAxis />
+                            </chart:SfChart.PrimaryAxis>
+                            <chart:SfChart.SecondaryAxis>
+                                <chart:DateTimeAxis />
+                            </chart:SfChart.SecondaryAxis>
+
+                            
+
+                            <chart:ColumnSeries 
+                                IsVisibleOnLegend="False"
+                                Color="LightBlue"
+                                ItemsSource="{Binding Data1}"
+                                XBindingPath="Number"
+                                YBindingPath="Quantity"
+                                />
+
+                            <chart:ColumnSeries 
+                                IsVisibleOnLegend="False"
+                                Color="#BAB6B3"
+                                ItemsSource="{Binding Data2}"
+                                XBindingPath="Number"
+                                YBindingPath="Quantity"
+                                />
+                        </chart:SfChart>
+                        <Image
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Source="proashipsf"
+                            VerticalOptions="CenterAndExpand"
+                        />
+
+                </Grid>
+                    <Label
+                    BackgroundColor="#0F1D44"    
+                    HeightRequest="3"
+                    Margin="5"
+                />
+                    <Grid 
+                Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                       BackgroundColor="#0F1D44"
+                     />
+
+                        <Label
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="#0F1D44"
+                     />
+
+                    </Grid>
+                </StackLayout>
+
+            </Grid>
+
+
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.AlertsPage"
+             Title="Alerts"
+             >
+            <ContentPage.ToolbarItems>
+                <ToolbarItem Icon="ic_Go"
+                    Command="{Binding AddImageCommand}"             
+                 />
+            </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <Grid 
+                Margin="10"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Padding="3"
+                    Text="OPERATION BRIEF"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="ARRIVAL"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="TENDERED NOR"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="ANCHORED"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="POB FOR BERTHING"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="ALL FAST"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="COMMENCED"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="6"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text="ETC"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="ETD"
+                        TextColor="#182546"
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="8"
+                        Text="MAR 05 - 12:00 LT"
+                        TextColor="#BAB6B3"
+                    />
+            </Grid>
+            <StackLayout>
+                <Grid 
+                    Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.09*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        BackgroundColor="#0F1D44"
+                        Padding="3"
+                        Text="ALERTS"
+                        TextColor="#BAB6B3" 
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                    />
+                    <StackLayout
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        BackgroundColor="AliceBlue"
+                    >
+                    </StackLayout>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="Operation stopped due to shore crane failure"
+                        TextColor="#182546"
+                        VerticalTextAlignment="Center"
+                    />
+                    <ImageButton
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Source="ic_Go"
+                        BackgroundColor="#0F1D44"
+                        VerticalOptions="CenterAndExpand"
+                        HeightRequest="20"
+                        Margin="2"
+                        CornerRadius="10"
+                        Command="{Binding AlertToGaleryAlertCommand}"
+                    />
+
+                    <StackLayout
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        BackgroundColor="AliceBlue"
+                        >
+                        
+                    </StackLayout>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="The capitan lost a person in the city"
+                        TextColor="#182546"
+                        VerticalTextAlignment="Center"
+                    />
+                    <ImageButton
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Source="ic_Go"
+                        BackgroundColor="#0F1D44"
+                        VerticalOptions="CenterAndExpand"
+                        HeightRequest="20"
+                        Margin="2"
+                        CornerRadius="10"
+                        Command="{Binding AlertToGaleryAlertCommand}"
+                    />
+
+
+
+                    <StackLayout
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        BackgroundColor="AliceBlue"
+                        >
+                    </StackLayout>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Text="Violent weather"
+                        TextColor="#182546"
+                        VerticalTextAlignment="Center"
+                    />
+                    <ImageButton
+                            Grid.Column="2"
+                            Grid.Row="3"
+                            Source="ic_Go"
+                            BackgroundColor="#0F1D44"
+                            VerticalOptions="CenterAndExpand"
+                            HeightRequest="20"
+                            Margin="2"
+                            CornerRadius="10"
+                            Command="{Binding AlertToGaleryAlertCommand}"
+                        />
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

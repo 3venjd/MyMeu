@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.VoysDetailsPage"
+             Title="{Binding Title}"
+             >
+    <ScrollView>
+        <StackLayout
+            >
+            <Grid
+                RowSpacing="1"
+                ColumnSpacing="1"
+            >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.9*"/>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="1.3*"/>
+                <ColumnDefinition Width="0.4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+                <!--#region Column0-->
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="VOYAGE"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="ACCOUNT"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="LAYCAN"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="CONTRACT"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="CARGO"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="SF"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="POL"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="FACILITY"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="8"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="POD"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="9"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="CARGO CHARTERER"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="10"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="OWNER/CHARTERER"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="11"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="SHIPPER"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="12"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="CONSIGNEE"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="13"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="OPS PIC"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="14"
+                    Grid.ColumnSpan="2"
+                    FontSize="Body"
+                    TextColor="#182546"
+                    VerticalTextAlignment="Center"
+                    Text="MOB"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="15"
+                    FontSize="Body"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="#182546"
+                    Text="STATUS"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="19"
+                    Grid.ColumnSpan="2"
+                    TextColor="#182546"
+                    FontSize="Body"
+                    Text="POSITION"
+                />
+
+                <!--#endregion-->
+                <!--#region Column1-->
+
+                <Button
+                Grid.Column="1"
+                Grid.Row="17"
+                Grid.ColumnSpan="2"
+                BackgroundColor="#0F1D44"
+                VerticalOptions="StartAndExpand"
+                HeightRequest="40"
+                Margin="0"
+                CornerRadius="12"
+                Text="Status"
+                TextColor="#BAB6B3"
+                Command="{Binding VoysDetailtoStatusCommand}"
+            />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="18"
+                    Grid.ColumnSpan="4"
+                    Padding="6"
+                    BackgroundColor="#0F1D44"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="#BAB6B3"
+                    Text="ACTUAL POSITION"
+                />
+
+
+                <!--#endregion-->
+                <!--#region Column2-->
+                <Label
+                Grid.Column="2"
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Voy_number}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Account}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Laycan}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Contract}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Cargo}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Sf}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Pol}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Facility}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="8"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Pod}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="9"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Cargo_Charterer}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="10"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Owner_Charterer}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="11"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Shipper}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="12"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Consignee}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="13"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="{Binding Voy.Employee.FullName}"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="14"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                VerticalTextAlignment="Center"
+                Text="3146784345"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="15"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="2688444"
+            />
+                <Label
+                Grid.Column="2"
+                Grid.Row="19"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                TextColor="#BAB6B3"
+                Text="Mar 05 - 12:00 lt"
+            />
+                <!--#endregion-->
+                <maps:Map   
+                        Grid.Row="20"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        HeightRequest="250"
+                        x:Name="MapView" 
+                        HorizontalOptions="FillAndExpand" 
+                        VerticalOptions="FillAndExpand" 
+                        MapType="Satellite"
+                />
+
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

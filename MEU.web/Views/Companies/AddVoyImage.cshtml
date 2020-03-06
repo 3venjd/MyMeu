@@ -1,0 +1,23 @@
+﻿@model MEU.web.Models.VoyImageViewModel
+
+
+@{
+    ViewData["Title"] = "AddVoyImage";
+}
+
+<h2>AddVoyImage</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddVoyImage" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Voy_id" />
+
+            <partial name="_VoyImage" />
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+
+        </form>
+    </div>
+</div>

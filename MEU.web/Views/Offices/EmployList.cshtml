@@ -1,0 +1,104 @@
+﻿
+@model MEU.web.Data.Entities.Office
+
+@{
+    ViewData["Title"] = "EmployList";
+}
+
+<h2>EmployList</h2>
+
+<h1>
+    @Html.DisplayFor(model => model.Name)
+</h1>
+
+<div>
+    <a asp-action="Index" class="btn btn-default">Back to Company</a>
+</div>
+<div></div>
+<div>
+    <a asp-action="AddEmployee" asp-route-id="@Model.Id" class="btn btn-success">Add Employees</a>
+</div>
+@if (Model.Employees.Count == 0)
+{
+    <h5>
+        This company hasn´t employee now
+    </h5>
+}
+else
+{
+
+    <h3>Your Employees</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Cargo
+                </th>
+                <th>
+                    Skype
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Employees)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cargo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Skype)
+                    </td>
+
+                    <td>
+                        <a asp-action="EmployeeDetails" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                        <a asp-action="EditEmployee" asp-route-id="@item.Id" class="btn btn-info">Edit</a>
+                        <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Offices/DeleteEmployee/' + item_to_delete;
+            });
+        });
+    </script>
+}

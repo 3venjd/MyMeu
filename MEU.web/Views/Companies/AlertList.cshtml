@@ -1,0 +1,67 @@
+﻿@model MEU.web.Data.Entities.Status
+@{
+    ViewData["Title"] = "AlertList";
+}
+
+<h2>Alert</h2>
+
+<p>
+    <a asp-action="AddAlert" asp-route-id="@Model.Id">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Description
+            </th>
+            <th>
+                Date
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Alerts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Alert_Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Alert_DateLocal)
+                </td>
+                <td>
+                    <a asp-action="EditAlert" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="AlertImagetList" asp-route-id="@item.Id">Gallery</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Companies/DeleteAlert/' + item_to_delete;
+            });
+        });
+    </script>
+}

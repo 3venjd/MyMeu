@@ -1,0 +1,71 @@
+﻿@model MEU.web.Data.Entities.Terminal
+@{
+    ViewData["Title"] = "LineUpList";
+}
+
+<h2>LineUpList</h2>
+
+<p>
+    <a asp-action="AddLineUp" asp-route-id="@Model.Id">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Vessel
+            </th>
+            <th>
+                Eta
+            </th>
+            <th>
+                Cargo
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.LineUps)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vessel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EtaLocal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+
+            <td>
+                <a asp-action="EditLineUp" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="DetailsLineUp" asp-route-id="@item.Id">Full Information</a>
+                <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Ports/DeleteLineUp/' + item_to_delete;
+            });
+        });
+    </script>
+}

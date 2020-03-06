@@ -1,0 +1,84 @@
+﻿@model IEnumerable<MEU.web.Data.Entities.Office>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Our Offices</h2>
+
+<p>
+    <a asp-action="Create_Office" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                City
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Postal Code
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Main Email
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Adress)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Postal_Code)
+                </th>
+
+                <th>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </th>
+                <th>
+                </th>
+                <td>
+                    <a asp-action="EditOffice" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="EmployList" asp-route-id="@item.Id" class="btn btn-default">Employees</a>
+                    <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Offices/DeleteOffice/' + item_to_delete;
+            });
+        });
+    </script>
+}

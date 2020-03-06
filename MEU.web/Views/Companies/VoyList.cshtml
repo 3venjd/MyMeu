@@ -1,0 +1,112 @@
+﻿@model MEU.web.Data.Entities.Company
+@{
+    ViewData["Title"] = "VoyList";
+}
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <h1>
+        @Html.DisplayFor(model => model.Name)
+    </h1>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-success">Back to Companies</a>
+</div>
+
+<div>
+    <a asp-action="AddVoy" asp-route-id="@Model.Id" class="btn btn-success">Add Voy</a>
+</div>
+
+@if (Model.Voys.Count == 0)
+{
+    <h5>
+        You don't have voys now
+    </h5>
+}
+else
+{
+
+    <h3>Your Voys</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Voys.FirstOrDefault().Vessel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Voys.FirstOrDefault().Port)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Voys.FirstOrDefault().Statuses.FirstOrDefault().Name_status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Voys.FirstOrDefault().EtaLocal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Voys.FirstOrDefault().EtbLocal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Voys.FirstOrDefault().EtcLocal)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Voys)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vessel.Vessel_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Port.Port_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Statuses.FirstOrDefault().Name_status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EtaLocal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EtbLocal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EtcLocal)
+                    </td>
+
+                    <td>
+                        <a asp-action="EditVoy" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Details Voy" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                        <a asp-action="OpinionList" asp-route-id="@item.Id" class="btn btn-info">Opinions</a>
+                        <a asp-action="StatusList" asp-route-id="@item.Id" class="btn btn-danger">Status</a>
+                        <a asp-action="VoyImagetList" asp-route-id="@item.Id" class="btn btn-danger">Gallery</a>
+                        <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button> 
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Companies/Deletevoy/' + item_to_delete;
+            });
+        });
+    </script>
+}

@@ -1,0 +1,27 @@
+﻿@model MEU.web.Models.HoldViewModel
+
+@{
+    ViewData["Title"] = "AddHold";
+}
+
+<h2>AddHold</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddHold">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Status_id" />
+
+            <partial name="_Hold" />
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="OpinionList">Back to List</a>
+</div>
+

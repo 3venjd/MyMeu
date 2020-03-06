@@ -1,0 +1,99 @@
+﻿@model MEU.web.Data.Entities.Voy
+
+@{
+    ViewData["Title"] = "StatusList";
+}
+
+<h2>StatusList</h2>
+
+<p>
+    <a asp-action="AddStatus" asp-route-id="@Model.Id">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Status
+            </th>
+            <th>
+                Arrival
+            </th>
+            <th>
+                Anchored
+            </th>
+            <th>
+                Pob
+            </th>
+            <th>
+                All Fast
+            </th>
+            <th>
+                Commenced
+            </th>
+            <th>
+                Update
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Statuses)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name_status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arrival)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Anchored)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pob)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AllFast)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Commenced)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateUpdate)
+                </td>
+                <td>
+                    <a asp-action="EditStatus" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="HoldList" asp-route-id="@item.Id">Holds</a>
+                    <a asp-action="AlertList" asp-route-id="@item.Id">Alert</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Companies/DeleteStatus/' + item_to_delete;
+            });
+        });
+    </script>
+}

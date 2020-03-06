@@ -1,0 +1,67 @@
+﻿@model MEU.web.Data.Entities.Alert
+
+@{
+    ViewData["Title"] = "AlertImagetList";
+}
+
+<h2>Gallery</h2>
+
+<p>
+    <a asp-action="AddAlertImage" asp-route-id="@Model.Id">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Image
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AlertImages)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:400px;height:250px;" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="EditAlertImage" asp-route-id="@item.Id">Edit</a>
+                    <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Companies/DeleteAlertImage/' + item_to_delete;
+            });
+        });
+    </script>
+}

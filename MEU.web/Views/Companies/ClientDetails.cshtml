@@ -1,0 +1,41 @@
+﻿@model MEU.web.Data.Entities.Client
+
+@{
+    ViewData["Title"] = "ClientDetails";
+}
+
+<h2>ClientDetails</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dd>
+            @Html.DisplayFor(model => model.Company.Clients.FirstOrDefault().User.Document)
+        </dd>
+        <dt>
+            Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Company.Clients.FirstOrDefault().User.FullName)
+        </dd>
+        <dt>
+            User Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Company.Clients.FirstOrDefault().User.UserName)
+        </dd>
+        <dt>
+            Phone
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Company.Clients.FirstOrDefault().User.PhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="ClientList" asp-route-id="@Model.Id" class="btn btn-primary">Back to List</a>
+</div>

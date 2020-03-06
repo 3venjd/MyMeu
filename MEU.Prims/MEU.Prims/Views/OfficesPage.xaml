@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.OfficesPage"
+             Title="Offices"
+             BackgroundColor="#0F1D44"
+             >
+    <ScrollView>
+        <StackLayout>
+            <Grid
+                    Margin="5"
+                    ColumnSpacing="1"
+                    RowSpacing="5"
+                    >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.8*"/>
+                    <ColumnDefinition Width="0.2*"/>
+
+                </Grid.ColumnDefinitions>
+                <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="meub"
+                        HeightRequest="100"
+                     />
+
+                <!--#region office1-->
+                <Frame
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Padding="3"
+                        HasShadow="True"
+                        >
+                    <Label
+                            TextColor="#0F1D44"
+                            Text="Barranquilla"
+                             FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+                <ImageButton
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Source="ic_Go"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="20"
+                        Command="{Binding FullStyleToOfficeCommand}"
+                     />
+
+
+                <Image
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="portmain"
+                        HeightRequest="150"
+                        Aspect="Fill"
+                        
+                     />
+                <!--#endregion-->
+
+                <!--#region office2-->
+                <Frame
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Padding="3"
+                        HasShadow="True"
+                        >
+                    <Label
+                            
+                            Text="Bogota"
+                            TextColor="#0F1D44"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+
+                <ImageButton
+                        Grid.Row="3"
+                        Grid.Column="1"
+                       Source="ic_Go"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="20"
+                        Command="{Binding FullStyleToOfficeCommand}"
+                     />
+
+
+                <Image
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="portmain"
+                        HeightRequest="150"
+                        Aspect="Fill"
+                        
+                     />
+                <!--#endregion-->
+
+                <!--#region office3-->
+                <Frame
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Padding="3"
+                        HasShadow="True"
+                        >
+                    <Label
+                            Text="Buenaventura"
+                            TextColor="#0F1D44"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+                <ImageButton
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Source="ic_Go"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="20"
+                        Command="{Binding FullStyleToOfficeCommand}"
+                     />
+
+
+                <Image
+                        Grid.Row="6"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="portmain"
+                        HeightRequest="150"
+                        Aspect="Fill"
+                        
+                     />
+                <!--#endregion-->
+
+                <!--#region office4-->
+                <Frame
+                        Grid.Row="7"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Padding="3"
+                        HasShadow="True"
+                        >
+                    <Label
+                        Text="Cartagena"
+                        TextColor="#0F1D44"
+                         FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                    />
+                </Frame>
+                <ImageButton
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        Source="ic_Go"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="20"
+                        Command="{Binding FullStyleToOfficeCommand}"
+                     />
+
+
+                <Image
+                        Grid.Row="8"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="portmain"
+                        HeightRequest="150"
+                        Aspect="Fill"
+                        
+                     />
+                <!--#endregion-->
+
+                <!--#region office5-->
+                <Frame
+                        Grid.Row="9"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Padding="3"
+                        HasShadow="True"
+                     >
+                    <Label
+                            Text="Medellin"
+                            TextColor="#0F1D44"
+                             FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+                <ImageButton
+                        Grid.Row="9"
+                        Grid.Column="1"
+                        Source="ic_Go"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="20"
+                        Command="{Binding FullStyleToOfficeCommand}"
+                     />
+
+
+                <Image
+                        Grid.Row="10"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="portmain"
+                        HeightRequest="150"
+                        Aspect="Fill"
+                        
+                     />
+                <!--#endregion-->
+
+                <!--#region office6-->
+                <Frame
+                        Grid.Row="11"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Padding="3"
+                        HasShadow="True"
+                     >
+                    <Label
+                        Text="Puerto Brisa"
+                        TextColor="#0F1D44"
+                         FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                    />
+                </Frame>
+                <ImageButton
+                        Grid.Row="11"
+                        Grid.Column="1"
+                       Source="ic_Go"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="20"
+                        Command="{Binding FullStyleToOfficeCommand}"
+                     />
+
+
+                <Image
+                        Grid.Row="12"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="portmain"
+                        HeightRequest="150"
+                        Aspect="Fill"
+                        
+                     />
+                <!--#endregion-->
+
+                <!--#region office7-->
+                <Frame
+                        Grid.Row="13"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Padding="3"
+                        HasShadow="True"
+                     >
+                    <Label
+                            Text="Puerto Bolivar"
+                            TextColor="#0F1D44"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                    />
+                </Frame>
+                <ImageButton
+                        Grid.Row="13"
+                        Grid.Column="1"
+                        Source="ic_Go"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="20"
+                        Command="{Binding FullStyleToOfficeCommand}"
+                     />
+
+
+                <Image
+                        Grid.Row="14"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="portmain"
+                        HeightRequest="150"
+                        Aspect="Fill"
+                        
+                     />
+                <!--#endregion-->
+
+                <!--#region office8-->
+                <Frame
+                        Grid.Row="15"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Padding="3"
+                        HasShadow="True"
+                     >
+                    <Label
+                            Text="Santa Marta"
+                            TextColor="#0F1D44"
+                             FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                        />
+                </Frame>
+                <ImageButton
+                        Grid.Row="15"
+                        Grid.Column="1"
+                        Source="ic_Go"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="20"
+                        Command="{Binding FullStyleToOfficeCommand}"
+                     />
+
+
+                <Image
+                        Grid.Row="16"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Source="portmain"
+                        HeightRequest="150"
+                        Aspect="Fill"
+                        
+                     />
+                <!--#endregion-->
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

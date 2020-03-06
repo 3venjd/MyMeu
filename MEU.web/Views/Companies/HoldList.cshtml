@@ -1,0 +1,87 @@
+﻿@model MEU.web.Data.Entities.Status
+
+@{
+    ViewData["Title"] = "HoldList";
+}
+
+<h2>HoldList</h2>
+
+<p>
+    <a asp-action="AddHold" asp-route-id="@Model.Id">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Hold
+            </th>
+            <th>
+                Actual Quantity
+            </th>
+            <th>
+                Actual Quantity
+            </th>
+            <th>
+                Max Quantity
+            </th>
+            <th>
+                First Charge
+            </th>
+            <th>
+                Last Charge
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Holds)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hold_Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Actual_Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Max_Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.First_ChargeLocal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Last_ChargeLocal)
+                </td>
+                <td>
+                    <a asp-action="EditHold" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="_DeleteDialog" />
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var item_to_delete;
+
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function ()
+            {
+                window.location.href = '/Companies/DeleteHold/' + item_to_delete;
+            });
+        });
+    </script>
+}

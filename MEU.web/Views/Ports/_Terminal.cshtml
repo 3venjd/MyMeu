@@ -1,0 +1,47 @@
+﻿@model MEU.web.Models.TerminalViewModel
+
+<div class="form-group">
+    <label asp-for="Terminal_Name" class="control-label"></label>
+    <input asp-for="Terminal_Name" class="form-control" />
+    <span asp-validation-for="Terminal_Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Max_Loa" class="control-label"></label>
+    <input asp-for="Max_Loa" class="form-control" />
+    <span asp-validation-for="Max_Loa" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Max_Beam" class="control-label"></label>
+    <input asp-for="Max_Beam" class="form-control" />
+    <span asp-validation-for="Max_Beam" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Max_Draft" class="control-label"></label>
+    <input asp-for="Max_Draft" class="form-control" />
+    <span asp-validation-for="Max_Draft" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Displacement" class="control-label"></label>
+    <input asp-for="Displacement" class="form-control" />
+    <span asp-validation-for="Displacement" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Water_Density" class="control-label"></label>
+    <input asp-for="Water_Density" class="form-control" />
+    <span asp-validation-for="Water_Density" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Working_hours" class="control-label"></label>
+    <input asp-for="Working_hours" class="form-control" />
+    <span asp-validation-for="Working_hours" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Type_Cargo" class="control-label"></label>
+    <input asp-for="Type_Cargo" class="form-control" />
+    <span asp-validation-for="Type_Cargo" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="ImageFile" class="control-label"></label>
+    <input asp-for="ImageFile" class="form-control" type="file" />
+    <span asp-validation-for="ImageFile" class="text-danger"></span>
+</div>

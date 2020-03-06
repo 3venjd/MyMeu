@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="MEU.Prims.Views.VoysPage"
+             Title="{Binding Title}"
+             >
+
+    <StackLayout>
+        <ListView
+            ItemsSource="{Binding Voys}"
+            HasUnevenRows="True"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid 
+                            RowSpacing="5"
+                            Margin="10"
+                            x:Name="Statuses"
+                        >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding VoytoDetailCommand}"/>
+                            </Grid.GestureRecognizers>
+
+                            <Label
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Grid.ColumnSpan="2"
+                                HorizontalTextAlignment="Center"
+                                FontSize="Large"
+                                TextColor="#BAB6B3"
+                                BackgroundColor="#0F1D44"
+                                Padding="8"
+                                Text="{Binding Vessel.Vessel_Name}"
+                            />
+                            <Image
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                BackgroundColor="Red"
+                                Aspect="AspectFill"
+                                HeightRequest="100" 
+                                Source="{Binding FirtsImage}"
+                            />
+                            <Button
+                                Grid.Column="0"
+                                Grid.Row="2"
+                                CornerRadius="4"
+                                HeightRequest="20"
+                                MinimumHeightRequest="20"
+                                Padding="1"
+                                TextColor="#BAB6B3"
+                                Text="Gallery"
+                                FontSize="Small"
+                                BackgroundColor="#0F1D44"
+                                VerticalOptions="Start"
+                                Command="{Binding VoysDetailtoGalery}"
+                            />
+                            <Grid
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.6*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    TextColor="#182546"
+                                    Text="PORT"
+                                />
+
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    TextColor="#182546"
+                                    Text="ETA"
+                                 />
+
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="2"
+                                    TextColor="#182546"
+                                    Text="ETB"
+                                />
+
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="3"
+                                    TextColor="#182546"
+                                    Text="ETC"
+                                />
+
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="4"
+                                    TextColor="#182546"
+                                    Text="STATUS"
+                                />
+
+
+                                <Label
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    TextColor="#BAB6B3"
+                                    Text="{Binding Port.Port_Name}"
+                                />
+
+                                <Label
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    TextColor="#BAB6B3"
+                                    Text="{Binding Eta, StringFormat='{0:MMMM d}'}"
+                                />
+
+                                <Label
+                                    Grid.Column="1"
+                                    Grid.Row="2"
+                                    TextColor="#BAB6B3"
+                                    Text="{Binding Etb, StringFormat='{0:MMMM d}'}"
+                                />
+
+                                <Label
+                                    Grid.Column="1"
+                                    Grid.Row="3"
+                                    TextColor="#BAB6B3"
+                                    Text="{Binding Etc, StringFormat='{0:MMMM d}'}"
+                                />
+
+                                <Label
+                                    Grid.Column="1"
+                                    Grid.Row="4"
+                                    TextColor="#BAB6B3"
+                                    Text="{Binding Statuses.Name_status}"
+                                />
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.PortsPage"
+             Title="Ports"
+             >
+    <ScrollView>
+        <StackLayout
+            Margin="2">
+            <Grid
+                RowSpacing="3"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--#region Port1 -->
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Padding="8"
+                    Text="BARRANQUILLA"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                />
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    BackgroundColor="Black"
+                    Source="portmain"
+                    Aspect="AspectFill"
+                    
+                />
+                <StackLayout
+                        Grid.Column="1"
+                        Grid.Row="1"     
+                    >
+
+                    <Grid
+                        RowSpacing="0"
+                    >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PortToTerminalCommand}"/>
+                    </Grid.GestureRecognizers>
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="Compas"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                            FontSize="Small"
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="Lineup"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Text="Riverport"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                            
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Text="Bitco"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+                        
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Text="Palermo"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                            
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="4"
+                            Text="Pbsp"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                            
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="4"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="5"
+                            Text="Port Magdalena"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            FontFamily="Oswald"
+                            
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="5"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+                        
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="6"
+                            Text="Pimsa"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                            
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="6"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+
+                    </Grid>
+                </StackLayout>
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Text="General Information"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    Padding="-10"
+                    Command="{Binding PortToTerminalCommand}"
+                />
+                <!--#endregion-->
+
+                <!--#region Port2 -->
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Text="CARTAGENA"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Padding="8"
+                />
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Grid.RowSpan="2"
+                    BackgroundColor="Black"
+                    Source="portmain"
+                    Aspect="AspectFill"
+                    
+                />
+                <StackLayout
+                    Grid.Column="1"
+                    Grid.Row="4"     
+                >
+
+                    <Grid
+                        RowSpacing="3"
+                    >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PortToTerminalCommand}"/>
+                    </Grid.GestureRecognizers>
+
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="Maneuver zone"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Text="Loader chart"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Text="Shore Crane Chart"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+
+
+                    </Grid>
+                </StackLayout>
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Text="General Information"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    Padding="-10"
+                    Command="{Binding PortToTerminalCommand}"
+                />
+
+                <!--#endregion-->
+
+                <!--#region Port3 -->
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Text="SANTA MARTA"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Padding="8"
+                />
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    Grid.RowSpan="2"
+                    BackgroundColor="Black"
+                    Source="portmain"
+                    Aspect="AspectFill"
+                    
+                />
+                <StackLayout
+                    Grid.Column="1"
+                    Grid.Row="7"     
+                >
+
+                    <Grid
+                        RowSpacing="3"
+                    >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PortToTerminalCommand}"/>
+                    </Grid.GestureRecognizers>
+
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="Carbosan"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                        />
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Text="Spsm"
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                        />
+
+                    </Grid>
+                </StackLayout>
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="8"
+                    Text="General Information"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    Padding="-10"
+                    Command="{Binding PortToTerminalCommand}"
+                />
+                <!--#endregion-->
+
+                <!--#region Port4 -->
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="9"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Text="PUERTO BOLIVAR"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Padding="8"
+                />
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="10"
+                    Grid.RowSpan="2"
+                    BackgroundColor="Black"
+                    Source="portmain"
+                    Aspect="AspectFill"
+                />
+                <StackLayout
+                    Grid.Column="1"
+                    Grid.Row="10"     
+                >
+                <Grid
+                    RowSpacing="3"
+                >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PortToTerminalCommand}"/>
+                    </Grid.GestureRecognizers>
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text=" "
+                            TextColor="#BAB6B3"
+                            HeightRequest="20"
+                            FontAttributes="Bold"
+                            FontFamily="Oswald"
+                        />
+                        <Button
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="Line up"
+                            HeightRequest="22"
+                            WidthRequest="3"
+                            Padding="-10"
+                            FontSize="Micro"
+                            FontFamily="Oswald"
+                            TextColor="White"
+                            Command="{Binding PorToLineUp}"
+                        />
+                    </Grid>
+                </StackLayout>
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="11"
+                    Text="General Information"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    Padding="-10"
+                    Command="{Binding PortToTerminalCommand}"
+                />
+                <!--#endregion-->
+
+                <!--#region Port5 -->
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="12"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Text="PUERTO BRISA"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Padding="8"
+                />
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="13"
+                    Grid.RowSpan="2"
+                    BackgroundColor="Black"
+                    Source="portmain"
+                    Aspect="AspectFill"
+                />
+                <StackLayout
+                    Grid.Column="1"
+                    Grid.Row="13"     
+                >
+
+                <Grid
+                    RowSpacing="3"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding PortToTerminalCommand}"/>
+                </Grid.GestureRecognizers>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text=" "
+                    TextColor="#BAB6B3"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                />
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Text="Line up"
+                    HeightRequest="22"
+                    WidthRequest="3"
+                    Padding="-10"
+                    FontSize="Micro"
+                    FontFamily="Oswald"
+                    TextColor="White"
+                    Command="{Binding PorToLineUp}"
+                />
+                    </Grid>
+                </StackLayout>
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="14"
+                    Text="General Information"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    Padding="-10"
+                    Command="{Binding PortToTerminalCommand}"
+                />
+                <!--#endregion-->
+
+                <!--#region Port6 -->
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="15"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Text="BUENAVENTURA"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Padding="8"
+                 />
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="16"
+                    Grid.RowSpan="2"
+                    BackgroundColor="Black"
+                    Source="portmain"
+                    Aspect="AspectFill"
+                    
+                />
+                <StackLayout
+                    Grid.Column="1"
+                    Grid.Row="16"     
+                >
+
+                <Grid
+                    RowSpacing="3"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding PortToTerminalCommand}"/>
+                </Grid.GestureRecognizers>
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="SBUN"
+                    TextColor="#BAB6B3"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                />
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Text="Line up"
+                    HeightRequest="22"
+                    WidthRequest="3"
+                    Padding="-10"
+                    FontSize="Micro"
+                    FontFamily="Oswald"
+                    TextColor="White"
+                    Command="{Binding PorToLineUp}"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Text="GP XIII"
+                    TextColor="#BAB6B3"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                />
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Text="Line up"
+                    HeightRequest="22"
+                    WidthRequest="3"
+                    Padding="-10"
+                    FontSize="Micro"
+                    FontFamily="Oswald"
+                    TextColor="White"
+                    Command="{Binding PorToLineUp}"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Text="COMPAS AGUADULCE"
+                    TextColor="#BAB6B3"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    FontSize="Small"
+                />
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Text="Line up"
+                    HeightRequest="22"
+                    WidthRequest="3"
+                    Padding="-10"
+                    FontSize="Micro"
+                    FontFamily="Oswald"
+                    TextColor="White"
+                    Command="{Binding PorToLineUp}"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="COMPAS BUN"
+                    TextColor="#BAB6B3"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                />
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Text="Line up"
+                    HeightRequest="22"
+                    WidthRequest="3"
+                    Padding="-10"
+                    FontSize="Micro"
+                    FontFamily="Oswald"
+                    TextColor="White"
+                    Command="{Binding PorToLineUp}"
+                />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Text="SPIA"
+                    TextColor="#BAB6B3"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                />
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Text="Line up"
+                    HeightRequest="22"
+                    WidthRequest="3"
+                    Padding="-10"
+                    FontSize="Micro"
+                    FontFamily="Oswald"
+                    TextColor="White"
+                    Command="{Binding PorToLineUp}"
+                />
+
+                    </Grid>
+                </StackLayout>
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="17"
+                    Text="General Information"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    Padding="-10"
+                    Command="{Binding PortToTerminalCommand}"
+                />
+                <!--#endregion-->
+
+                <!--#region Port7 -->
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="18"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Text="TUMACO"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Padding="8"
+                />
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="19"
+                    Grid.RowSpan="2"
+                    BackgroundColor="Black"
+                    Source="portmain"
+                    Aspect="AspectFill"
+                />
+                <StackLayout
+                    Grid.Column="1"
+                    Grid.Row="19"     
+                >
+
+                <Grid
+                    RowSpacing="3"
+                >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PortToTerminalCommand}"/>
+                    </Grid.GestureRecognizers>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text=" "
+                        TextColor="#BAB6B3"
+                        HeightRequest="20"
+                        FontAttributes="Bold"
+                        FontFamily="Oswald"
+                    />
+                    <Button
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text="Line up"
+                        HeightRequest="22"
+                        WidthRequest="3"
+                        Padding="-10"
+                        FontSize="Micro"
+                        FontFamily="Oswald"
+                        TextColor="White"
+                        Command="{Binding PorToLineUp}"
+                    />
+                    </Grid>
+                </StackLayout>
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="20"
+                    Text="General Information"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    Padding="-10"
+                    Command="{Binding PortToTerminalCommand}"
+                />
+
+                <!--#endregion-->
+
+                <!--#region Port8 -->
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="21"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#0F1D44"
+                    Text="TOLU"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Padding="8"
+                />
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="22"
+                    Grid.RowSpan="2"
+                    BackgroundColor="Black"
+                    Source="portmain"
+                    Aspect="AspectFill"
+                />
+                <StackLayout
+                    Grid.Column="1"
+                    Grid.Row="22"     
+                >
+
+                    <Grid
+                        RowSpacing="3"
+                    >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PortToTerminalCommand}"/>
+                    </Grid.GestureRecognizers>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text=" "
+                        TextColor="#BAB6B3"
+                        HeightRequest="20"
+                        FontAttributes="Bold"
+                        FontFamily="Oswald"
+                    />
+                    <Button
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text="Line up"
+                        HeightRequest="22"
+                        WidthRequest="3"
+                        Padding="-10"
+                        FontSize="Micro"
+                        FontFamily="Oswald"
+                        TextColor="White"
+                        Command="{Binding PorToLineUp}"
+                    />
+
+                    </Grid>
+                </StackLayout>
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="23"
+                    Text="General Information"
+                    TextColor="#BAB6B3"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    FontAttributes="Bold"
+                    FontFamily="Oswald"
+                    Padding="-10"
+                    Command="{Binding PortToTerminalCommand}"
+                />
+
+                <!--#endregion-->
+
+
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

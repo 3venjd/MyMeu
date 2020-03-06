@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.LineUpsGeneral"
+             Title="LineUp"
+             >
+    <StackLayout
+        Margin="5"
+        >
+        <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BackgroundColor="#0F1D44"
+                    HorizontalTextAlignment="Center"
+                    Padding="9"
+                    Text="VESSEL"
+                />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    BackgroundColor="#0F1D44"
+                    Padding="9"
+                    Text="ETA"
+                    />
+                <Label
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Text="CARGO"
+                    Padding="9"
+                    BackgroundColor="#0F1D44"
+                    />
+
+            </Grid>
+            <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GenDetommand}"/>
+                </Grid.GestureRecognizers>
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Chemstar iris"    
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="30 jun"    
+                    />
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Edible Oil"    
+                    />
+
+
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Nordic Lynx"    
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="30 jun"    
+                    />
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Crude"    
+                    />
+
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Munt Gracht"    
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="30 jun"    
+                    />
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Steel"    
+                    />
+
+
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Ekaterina"    
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="01 jul"    
+                    />
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="3"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Coal"    
+                    />
+
+
+                <Label
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Asia Spirit"    
+                    />
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="02 jul"    
+                    />
+                <Label
+                        Grid.Column="2"
+                        Grid.Row="4"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Fertilizers"    
+                    />
+
+
+
+
+
+            </Grid>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

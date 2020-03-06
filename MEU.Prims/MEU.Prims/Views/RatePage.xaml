@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.RatePage"
+             
+             >
+    <StackLayout
+            BindingContext="{Binding Voys}"  
+            Padding="8"
+    >
+        <Grid
+            ColumnSpacing="0"
+            RowSpacing="10"
+        >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="1"
+                BackgroundColor="#0F1D44"
+                TextColor="White"
+                Text="RATE US"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+            />
+
+            <rating:SfRating
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalOptions="CenterAndExpand"
+                Precision="Exact"
+                >
+                <rating:SfRating.RatingSettings>
+                    <rating:SfRatingSettings RatedFill="#0F1D44"/>
+                </rating:SfRating.RatingSettings>
+            </rating:SfRating>
+
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="2"
+                Padding="1"
+                BackgroundColor="#0F1D44"
+                TextColor="White"
+                Text="HELP US IMPROVE OUR SERVICE"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+            />
+
+            <Editor
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Placeholder="OPTIONAL"
+                />
+
+            <Button
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Padding="7"
+                    BackgroundColor="#0F1D44"
+                    TextColor="White"
+                    Text="SEND AND CONTINUE"
+                    CornerRadius="8"
+                    HorizontalOptions="Center"
+                    Command="{Binding HtmlCommand}"
+                    
+                />
+
+        </Grid>
+    </StackLayout>
+
+
+
+</ContentPage>

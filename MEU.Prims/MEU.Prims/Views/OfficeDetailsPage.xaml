@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MEU.Prims.Views.OfficeDetailsPage"
+             Title="FullStyle"
+             BackgroundColor="#0F1D44"
+             >
+    <ScrollView>
+        <StackLayout >
+            <Grid
+                    Margin="5"
+                    ColumnSpacing="1"
+                    RowSpacing="5"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="0.15*"/>
+                    <ColumnDefinition Width="0.34*"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <!--#region Column0-->
+                <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.RowSpan="37"
+                        BackgroundColor="White"
+                        
+                    />
+
+                <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        BackgroundColor="White"
+                    />
+
+                <Label
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        Grid.RowSpan="37"
+                        BackgroundColor="White"
+                        
+                    />
+
+                <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        BackgroundColor="White"
+                        
+                    />
+
+
+                <!--#endregion-->
+
+                <!--#region Column1-->
+                <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Multiport Medellin (Head Office)"
+                        FontSize="Small"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                    />
+
+                <Label
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="Address:"
+                        TextColor="White"
+                        FontSize="Small"
+                    />
+
+                <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Text="Postal Code:"
+                        TextColor="White"
+                        FontSize="Small"
+                        
+                    />
+
+                <Label
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Text="Phone:"
+                        TextColor="White"
+                        FontSize="Small"
+                    />
+
+                <Label
+                        Grid.Row="6"
+                        Grid.Column="1"
+                        Text="USA Phone:"
+                        TextColor="White"
+                        
+                    />
+                <Label
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        Text="E-mail:"
+                        TextColor="White"
+                        
+                    />
+                <Label
+                        Grid.Row="8"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Text="www.multiport.com.co"
+                    />
+
+                <Label
+                        Grid.Row="9"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        TextColor="White"
+                        Text="Contact:"
+                    />
+
+                <Label
+                        Grid.Row="10"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        FontSize="Large"
+                        Text="Roberto E. Calero"
+                    />
+
+                <Label
+                        Grid.Row="11"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="President"
+                    />
+
+                <Label
+                        Grid.Row="12"
+                        Grid.Column="1"
+                        Text="Mobile:"
+                        TextColor="white"
+                        
+                    />
+
+                <Label
+                        Grid.Row="13"
+                        Grid.Column="1"
+                        Text="Phone:"
+                        TextColor="white"
+                        
+                    />
+
+                <Label
+                        Grid.Row="14"
+                        Grid.Column="1"
+                        Text="USA Phone:"
+                        TextColor="white"
+                        
+                    />
+
+                <Label
+                        Grid.Row="15"
+                        Grid.Column="1"
+                        Text="Skype:"
+                        TextColor="white"
+                        
+                    />
+
+                <Label
+                        Grid.Row="16"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Text="director@multiport.com.co"
+                        HorizontalTextAlignment="Center"
+                        TextColor="white"
+                        
+                    />
+
+                <Label
+                        Grid.Row="17"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        FontSize="Large"
+                        Text="Diego Pineda"
+                        
+                    />
+
+                <Label
+                        Grid.Row="18"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Key Account Manager"
+                    />
+
+                <Label
+                        Grid.Row="19"
+                        Grid.Column="1"
+                        TextColor="White"
+                        Text="Mobile:"
+                        
+                    />
+
+                <Label
+                        Grid.Row="20"
+                        Grid.Column="1"
+                         TextColor="White"
+                        Text="Phone:"
+                        
+                    />
+
+                <Label
+                        Grid.Row="21"
+                        Grid.Column="1"
+                       TextColor="White"
+                        Text="Skype:"
+                        
+                    />
+
+                <Label
+                        Grid.Row="22"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        Text="diego.pineda@multiport.com.co"
+                        
+                    />
+
+                <Label
+                        Grid.Row="23"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        FontSize="Large"
+                        Text="Juan Pulgarin"
+                        
+                    />
+
+                <Label
+                        Grid.Row="24"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Head of Operations"
+                        
+                    />
+
+                <Label
+                        Grid.Row="25"
+                        Grid.Column="1"
+                        TextColor="White"
+                        Text="Mobile:"
+                        
+                    />
+
+                <Label
+                        Grid.Row="26"
+                        Grid.Column="1"
+                        TextColor="White"
+                        Text="Phone:"
+                        
+                    />
+                <Label
+                        Grid.Row="27"
+                        Grid.Column="1"
+                        TextColor="White"
+                        Text="Skype:"
+                        
+                    />
+                <Label
+                        Grid.Row="28"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="operations@multiport.com.co"
+                        
+                    />
+                <Label
+                        Grid.Row="29"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        FontSize="Large"
+                        Text="Jhohan Gaviria"
+                        
+                    />
+                <Label
+                        Grid.Row="30"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Operation Executive"
+                        
+                    />
+                <Label
+                        Grid.Row="31"
+                        Grid.Column="1"
+                        TextColor="White"
+                        Text="Mobile:"
+                        
+                    />
+                <Label
+                        Grid.Row="32"
+                        Grid.Column="1"
+                        TextColor="White"
+                        Text="Phone:"
+                        
+                    />
+                <Label
+                        Grid.Row="33"
+                        Grid.Column="1"
+                        TextColor="White"
+                        Text="Skype:"
+                        
+                    />
+                <Label
+                        Grid.Row="34"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        Text="operations@multiport.com.co"
+                        
+                    />
+                <Label
+                        Grid.Row="36"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        BackgroundColor="White"
+                        
+                    />
+
+                <!--#endregion-->
+
+                <!--#region Column2-->
+
+                <Label
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="Calle 4 sur #43a-195, Centro Ejecutivo el Poblado,Office 128"
+                        
+                    />
+                <Label
+                        Grid.Row="4"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="050022"
+                        
+                    />
+
+                <Label
+                        Grid.Row="5"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57 4) 268 884 44"
+                        
+                    />
+
+                <Label
+                        Grid.Row="6"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(1) 305 330 54 83"
+                        
+                        
+                    />
+
+                <Button
+                        Grid.Row="7"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Command="{Binding MailCommand}"
+                        Text="medellin@multiport.com.co"
+                        
+                    />
+
+
+                <Button
+                        Grid.Row="12"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57) 315 509 48 70"
+                        Command="{Binding CallCommand}"
+                        HorizontalOptions="Start"
+                    />
+
+                <Label
+                        Grid.Row="13"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57 4) 268 84 44"
+                        
+                    />
+
+                <Label
+                        Grid.Row="14"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(1) 305 330 5484"
+                        
+                    />
+
+                <Label
+                        Grid.Row="15"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="robertocalero"
+                        
+                    />
+                <Label
+                        Grid.Row="19"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57) 315 649 9867"
+                        
+                    />
+
+                <Label
+                        Grid.Row="20"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57 4) 268 84 44"
+                        
+                    />
+
+                <Label
+                        Grid.Row="21"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="pricing.colfletar"
+                        
+                    />
+                <Label
+                        Grid.Row="25"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57) 315 668 5300"
+                        
+                    />
+                <Label
+                        Grid.Row="26"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57 4) 268 8444"
+                        
+                    />
+                <Label
+                        Grid.Row="27"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="ops2multiport"
+                        
+                    />
+                <Label
+                        Grid.Row="31"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57) 317 656 5031"
+                        
+                    />
+                <Label
+                        Grid.Row="32"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="(57 4) 268 8444"
+                        
+                    />
+                <Label
+                        Grid.Row="33"
+                        Grid.Column="2"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="jhohangaviria"
+                        
+                    />
+
+                <!--#endregion-->
+
+                <!--#region Column4-->
+
+                <Label
+                        Grid.Row="0"
+                        Grid.Column="4"
+                        Grid.RowSpan="37"
+                    />
+
+
+                <!--#endregion-->
+
+                <!--#region Column5-->
+
+                <Label
+                        Grid.Row="1"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Text="Other Ports"
+                        
+                    />
+
+                <Label
+                        Grid.Row="2"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                    />
+
+                <Grid
+                        Grid.Row="3"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        RowSpacing="1"
+                    >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            TextColor="White"
+                            Text="Tolu"
+                         />
+                    <Label
+                          Grid.Column="0"
+                            Grid.Row="1"
+                            TextColor="White"
+                            Text="Tumaco"
+                         />
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            TextColor="White"
+                            Text="Turbo"
+                         />
+                </Grid>
+
+                <Label
+                        Grid.Row="4"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Text="Special Expertise"
+                        
+                    />
+
+                <Label
+                        Grid.Row="5"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                    />
+
+                <Label
+                        Grid.Row="6"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Liner Services"
+                    />
+
+                <Label
+                        Grid.Row="7"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="BreakBulk Cargos"
+                        
+                    />
+                <Label
+                        Grid.Row="8"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Bulk Cargo"
+                        
+                    />
+
+                <Label
+                        Grid.Row="9"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="General Agency Management"
+                        
+                    />
+
+                <Label
+                        Grid.Row="10"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Husbandry and Protective Agents"
+                        
+                    />
+
+                <Label
+                        Grid.Row="11"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Ship Chandlers"
+                        
+                    />
+
+                <Label
+                        Grid.Row="12"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Stevendoring"
+                        
+                    />
+
+                <Label
+                        Grid.Row="13"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Tramp Agency"
+                        
+                    />
+
+                <Label
+                        Grid.Row="14"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        Text="Crew Change"
+                        
+                    />
+
+                <Label
+                        Grid.Row="15"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        
+                    />
+
+                <Label
+                        Grid.Row="16"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        TextColor="White"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Text="Certified by:"
+                        
+                    />
+
+                <Image  
+                        Grid.Row="17"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        Grid.RowSpan="2"
+                        Aspect="AspectFit"
+                        Source="iso9001"
+                    />
+
+
+
+                <Image
+                        Grid.Row="19"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="2"
+                        Grid.RowSpan="2"
+                        Aspect="AspectFit"
+                        Source="Basc"
+                        
+                    />
+
+
+
+                <Image
+                        Grid.Row="21"
+                        Grid.Column="5"
+                         Grid.ColumnSpan="2"
+                        Grid.RowSpan="2"
+                        Aspect="AspectFit"
+                        Source="Bimco"
+                        
+                    />
+
+
+
+                <Image
+                        Grid.Row="23"
+                        Grid.Column="5"
+                         Grid.ColumnSpan="2"
+                        Grid.RowSpan="2"
+                        Aspect="AspectFit"
+                        Source="camaracomercio"
+                    />
+
+                <!--#endregion-->
+
+
+
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
